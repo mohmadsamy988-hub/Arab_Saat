@@ -1,155 +1,155 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>??? ??? - ?????? ??????? ??????????</title>
+    <title>عرب سات - لخدمات المحمول والكمبيوتر</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 font-sans pb-24">
 
-    <!-- ?????? ????????? -->
+    <!-- الهيدر والبيانات -->
     <header class="bg-slate-900 text-white sticky top-0 z-40 shadow-lg border-b border-blue-600">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-3 space-x-reverse">
                     <div class="bg-blue-600 text-white rounded-lg font-bold text-xl flex items-center justify-center w-10 h-10 shadow">
-                        ???
+                        🛰️
                     </div>
                     <div>
-                        <h1 class="text-xl font-bold tracking-wide text-blue-400">??? ???</h1>
-                        <p class="text-xs text-gray-300">?????? ??????? ??????????</p>
+                        <h1 class="text-xl font-bold tracking-wide text-blue-400">عرب سات</h1>
+                        <p class="text-xs text-gray-300">لخدمات المحمول والكمبيوتر</p>
                     </div>
                 </div>
                 
-                <!-- ?? ??? ????? -->
+                <!-- زر فتح السلة -->
                 <button onclick="toggleCart()" class="relative bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center gap-2 transition">
                     <i class="fas fa-shopping-cart"></i>
-                    <span>????????/?????</span>
+                    <span>الفاتورة/السلة</span>
                     <span id="cart-count" class="bg-red-500 text-white text-xs rounded-full px-2 py-0.5 font-bold">0</span>
                 </button>
             </div>
             
-            <!-- ??????? -->
+            <!-- العنوان -->
             <div class="mt-2 text-xs text-gray-300 flex items-center gap-1 bg-slate-800/80 p-2 rounded-lg border border-slate-700">
                 <i class="fas fa-map-marker-alt text-red-400"></i>
-                <span>??? ????? - ????? ????? ??????? - ??? ????</span>
+                <span>شرم الشيخ - بجوار ماركت العباسي - محل أمان</span>
             </div>
         </div>
     </header>
 
-    <!-- ?????? ???????? -->
+    <!-- البانر الترويجي -->
     <section class="bg-gradient-to-r from-blue-900 via-slate-800 to-blue-950 text-white py-6 text-center px-4 shadow-inner">
-        <h2 class="text-2xl font-extrabold mb-1">?????? ????? ??????? ??????? ????????</h2>
-        <p class="text-gray-300 text-xs md:text-sm">???? ???????? ????? ?? ???????? ?? ???? ???? ???????? ?????? ???????? ?? ??? ???????? ??????</p>
+        <h2 class="text-2xl font-extrabold mb-1">منظومة طلبات البضاعة بالجملة والقطاعي</h2>
+        <p class="text-gray-300 text-xs md:text-sm">اختر المنتجات وتأكد من المخزون، ثم اختر مسؤل المبيعات لإرسال الفاتورة له عبر الواتساب مباشرة</p>
     </section>
 
-    <!-- ????? ??????? ???????? -->
+    <!-- أقسام البضاعة والمناطق -->
     <main class="container mx-auto px-4 py-6">
         
-        <!-- ????? ??????? ??? ????? -->
+        <!-- أزرار التصفية حسب القسم -->
         <div class="flex overflow-x-auto space-x-2 space-x-reverse mb-6 pb-2 scrollbar-none">
-            <button onclick="filterCategory('????')" class="cat-btn bg-blue-600 text-white px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap shadow-sm">????</button>
-            <button onclick="filterCategory('?????')" class="cat-btn bg-white text-gray-700 hover:bg-gray-200 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap shadow-sm">??? ???????</button>
-            <button onclick="filterCategory('??????')" class="cat-btn bg-white text-gray-700 hover:bg-gray-200 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap shadow-sm">??? ????????</button>
-            <button onclick="filterCategory('?????????')" class="cat-btn bg-white text-gray-700 hover:bg-gray-200 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap shadow-sm">??? ???????????</button>
+            <button onclick="filterCategory('الكل')" class="cat-btn bg-blue-600 text-white px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap shadow-sm">الكل</button>
+            <button onclick="filterCategory('شاشات')" class="cat-btn bg-white text-gray-700 hover:bg-gray-200 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap shadow-sm">قسم الشاشات</button>
+            <button onclick="filterCategory('سماعات')" class="cat-btn bg-white text-gray-700 hover:bg-gray-200 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap shadow-sm">قسم السماعات</button>
+            <button onclick="filterCategory('إكسسوارات')" class="cat-btn bg-white text-gray-700 hover:bg-gray-200 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap shadow-sm">قسم الإكسسوارات</button>
         </div>
 
-        <h3 class="text-lg font-bold text-gray-800 mb-4 border-r-4 border-blue-600 pr-3">????? ??????? ???????? ??????</h3>
+        <h3 class="text-lg font-bold text-gray-800 mb-4 border-r-4 border-blue-600 pr-3">قائمة البضاعة والمخزون المتاح</h3>
         
-        <!-- ???? ???????? -->
+        <!-- شبكة المنتجات -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="products-grid">
-            <!-- ???????? ???? ??? ??? JS -->
+            <!-- المنتجات تولد هنا عبر JS -->
         </div>
     </main>
 
-    <!-- ??????? ???????? ????? ????????? -->
+    <!-- النافذة المنبثقة للسلة والفاتورة -->
     <div id="cart-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex justify-center items-end sm:items-center p-0 sm:p-4 backdrop-blur-sm">
         <div class="bg-white w-full max-w-lg rounded-t-2xl sm:rounded-2xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col">
             
-            <!-- ???? ????? -->
+            <!-- هيدر السلة -->
             <div class="bg-slate-900 text-white p-4 flex justify-between items-center border-b border-blue-600">
                 <div>
                     <h3 class="font-bold text-base flex items-center gap-2">
-                        <i class="fas fa-file-invoice text-blue-400"></i> ?????? ???? - ??? ???
+                        <i class="fas fa-file-invoice text-blue-400"></i> فاتورة شراء - عرب سات
                     </h3>
                 </div>
                 <button onclick="toggleCart()" class="text-gray-400 hover:text-white text-xl"><i class="fas fa-times"></i></button>
             </div>
 
-            <!-- ????? ????? -->
+            <!-- محتوى السلة -->
             <div class="p-4 overflow-y-auto flex-1 divide-y divide-gray-100" id="cart-items">
-                <!-- ??????? -->
+                <!-- العناصر -->
             </div>
 
-            <!-- ?????? ??????? ?????? ????? -->
+            <!-- اختيار المسؤول وتأكيد الطلب -->
             <div class="p-4 bg-slate-50 border-t border-gray-200 space-y-3">
                 
                 <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">??? ?????? / ?????:</label>
-                    <input type="text" id="client-name" placeholder="????: ??? ????? - ??? ?????" class="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-blue-600">
+                    <label class="block text-xs font-bold text-gray-700 mb-1">اسم العميل / المحل:</label>
+                    <input type="text" id="client-name" placeholder="مثال: محل النجم - شرم الشيخ" class="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-blue-600">
                 </div>
 
-                <!-- ?????? ????? ?????? ???????? -->
+                <!-- اختيار الرقم لإرسال الفاتورة -->
                 <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">???? ???? ???????? ??????? ???????:</label>
+                    <label class="block text-xs font-bold text-gray-700 mb-1">اختر مسؤل المبيعات المباشر للتواصل:</label>
                     <select id="sales-contact" class="w-full p-2.5 border border-blue-500 rounded-lg text-sm font-bold bg-white text-slate-800 focus:outline-none">
-                        <option value="201000865864">???????? ???? ??? ????? (01000865864)</option>
-                        <option value="201000565680">????? ???? ?????? (01000565680)</option>
+                        <option value="201000865864">المستشار محمد أبو الزين (01000865864)</option>
+                        <option value="201000565680">دكتور سامي السعيد (01000565680)</option>
                     </select>
                 </div>
 
                 <div class="flex justify-between items-center font-bold text-base text-gray-800 pt-2 border-t">
-                    <span>?????? ????????:</span>
-                    <span class="text-blue-600 text-xl font-black" id="cart-total">0 ?.?</span>
+                    <span>إجمالي الفاتورة:</span>
+                    <span class="text-blue-600 text-xl font-black" id="cart-total">0 ج.م</span>
                 </div>
 
                 <button onclick="sendOrderToWhatsApp()" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-bold text-center flex items-center justify-center gap-2 text-base transition shadow-md">
-                    <i class="fab fa-whatsapp text-2xl"></i> ????? ???????? ??????? ??? ????????
+                    <i class="fab fa-whatsapp text-2xl"></i> إرسال الفاتورة للمسؤول عبر الواتساب
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- ?????? -->
+    <!-- الفوتر -->
     <footer class="bg-slate-900 text-gray-400 text-xs py-4 text-center border-t border-slate-800">
-        <p>??? ??? ?????? ??????? ?????????? - ??? ????? ????? ????? ??????? ??? ????</p>
-        <p class="mt-1 text-gray-500">?????: ???????? ???? ??? ????? | ????? ???? ??????</p>
+        <p>عرب سات لخدمات المحمول والكمبيوتر - شرم الشيخ بجوار ماركت العباسي محل أمان</p>
+        <p class="mt-1 text-gray-500">إدارة: المستشار محمد أبو الزين | دكتور سامي السعيد</p>
     </footer>
 
     <script>
-        // ????? ?????? ??? ???
+        // بضاعة ومخزون عرب سات
         const products = [
-            // ??? ???????
-            { id: 1, name: "???? ????? 11 ????? OLED", price: 1250, category: "?????", stock: 200, icon: "fa-mobile-alt" },
-            { id: 2, name: "???? ????? 12 / 12 ??? ??? ???", price: 1850, category: "?????", stock: 150, icon: "fa-mobile-alt" },
-            { id: 3, name: "???? ??????? A51 ?????", price: 850, category: "?????", stock: 200, icon: "fa-mobile-alt" },
-            { id: 4, name: "???? ??????? A12 ??? ???", price: 650, category: "?????", stock: 180, icon: "fa-mobile-alt" },
-            { id: 5, name: "???? ????? ??? 10 ??????", price: 720, category: "?????", stock: 200, icon: "fa-mobile-alt" },
+            // قسم الشاشات
+            { id: 1, name: "شاشة آيفون 11 أصلية OLED", price: 1250, category: "شاشات", stock: 200, icon: "fa-mobile-alt" },
+            { id: 2, name: "شاشة آيفون 12 / 12 برو فرز أول", price: 1850, category: "شاشات", stock: 150, icon: "fa-mobile-alt" },
+            { id: 3, name: "شاشة سامسونج A51 أصلية", price: 850, category: "شاشات", stock: 200, icon: "fa-mobile-alt" },
+            { id: 4, name: "شاشة سامسونج A12 فرز أول", price: 650, category: "شاشات", stock: 180, icon: "fa-mobile-alt" },
+            { id: 5, name: "شاشة ريدمي نوت 10 ممتازة", price: 720, category: "شاشات", stock: 200, icon: "fa-mobile-alt" },
 
-            // ??? ????????
-            { id: 6, name: "????? ?????? P9 Pro Max", price: 280, category: "??????", stock: 200, icon: "fa-headphones" },
-            { id: 7, name: "????? Joyroom JR-T03S ??????", price: 650, category: "??????", stock: 120, icon: "fa-headphones" },
-            { id: 8, name: "????? ?? ?????? ???? ?????", price: 350, category: "??????", stock: 80, icon: "fa-volume-up" },
-            { id: 9, name: "????? ??????? ??? ??? ???", price: 420, category: "??????", stock: 200, icon: "fa-headset" },
+            // قسم السماعات
+            { id: 6, name: "سماعة بلوتوث P9 Pro Max", price: 280, category: "سماعات", stock: 200, icon: "fa-headphones" },
+            { id: 7, name: "سماعة Joyroom JR-T03S الأصلي", price: 650, category: "سماعات", stock: 120, icon: "fa-headphones" },
+            { id: 8, name: "سماعة صب بلوتوث كبير محمول", price: 350, category: "سماعات", stock: 80, icon: "fa-volume-up" },
+            { id: 9, name: "سماعة ايربودز برو فرز أول", price: 420, category: "سماعات", stock: 200, icon: "fa-headset" },
 
-            // ??? ???????????
-            { id: 10, name: "???? ??? ???? Type-C ??? Lightning", price: 75, category: "?????????", stock: 200, icon: "fa-plug" },
-            { id: 11, name: "??? ???? 20 ??? ???? ???? ???????", price: 190, category: "?????????", stock: 200, icon: "fa-charging-station" },
-            { id: 12, name: "???? ??? 20000 ???? ????? ??? ????", price: 580, category: "?????????", stock: 90, icon: "fa-battery-full" },
-            { id: 13, name: "???? ????? ????????? HDMI / USB-C", price: 220, category: "?????????", stock: 150, icon: "fa-desktop" },
-            { id: 14, name: "???? ?????? ????????? ???? ?????", price: 110, category: "?????????", stock: 200, icon: "fa-mouse" },
-            { id: 15, name: "????? 64 ???? ???????? ?????", price: 165, category: "?????????", stock: 200, icon: "fa-hdd" }
+            // قسم الإكسسوارات
+            { id: 10, name: "كابل شحن سريع Type-C إلى Lightning", price: 75, category: "إكسسوارات", stock: 200, icon: "fa-plug" },
+            { id: 11, name: "رأس شاحن 20 واط سريع يدعم الآيفون", price: 190, category: "إكسسوارات", stock: 200, icon: "fa-charging-station" },
+            { id: 12, name: "باور بنك 20000 مللي أمبير شحن سريع", price: 580, category: "إكسسوارات", stock: 90, icon: "fa-battery-full" },
+            { id: 13, name: "وصلة تحويل للكمبيوتر HDMI / USB-C", price: 220, category: "إكسسوارات", stock: 150, icon: "fa-desktop" },
+            { id: 14, name: "ماوس وايرلس للكمبيوتر عالي الدقة", price: 110, category: "إكسسوارات", stock: 200, icon: "fa-mouse" },
+            { id: 15, name: "فلاشة 64 جيجا كينجستون أصلية", price: 165, category: "إكسسوارات", stock: 200, icon: "fa-hdd" }
         ];
 
         let cart = [];
-        let currentCategory = '????';
+        let currentCategory = 'الكل';
 
-        // ??? ???????? ????????
+        // عرض المنتجات وتصفيتها
         function renderProducts() {
             const grid = document.getElementById('products-grid');
-            const filteredProducts = currentCategory === '????' 
+            const filteredProducts = currentCategory === 'الكل' 
                 ? products 
                 : products.filter(p => p.category === currentCategory);
 
@@ -159,29 +159,29 @@
                         <div class="flex justify-between items-start mb-2">
                             <span class="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-bold">${p.category}</span>
                             <span class="text-[11px] bg-green-50 text-green-700 px-2 py-0.5 rounded font-bold">
-                                ???????: ${p.stock} ????
+                                المخزون: ${p.stock} قطعة
                             </span>
                         </div>
                         <div class="bg-blue-50/60 h-28 rounded-lg flex items-center justify-center text-blue-600 mb-3">
                             <i class="fas ${p.icon} text-4xl"></i>
                         </div>
                         <h4 class="font-bold text-gray-800 text-xs md:text-sm leading-snug">${p.name}</h4>
-                        <p class="text-blue-600 font-extrabold text-base my-2">${p.price} ?.?</p>
+                        <p class="text-blue-600 font-extrabold text-base my-2">${p.price} ج.م</p>
                     </div>
                     <button onclick="addToCart(${p.id})" class="w-full bg-slate-900 hover:bg-blue-600 text-white text-xs font-bold py-2 rounded-lg transition flex items-center justify-center gap-1">
-                        <i class="fas fa-cart-plus"></i> ????? ??? ????????
+                        <i class="fas fa-cart-plus"></i> إضافة إلى الفاتورة
                     </button>
                 </div>
             `).join('');
         }
 
-        // ????? ??????
+        // تصفية الفئات
         function filterCategory(category) {
             currentCategory = category;
             renderProducts();
         }
 
-        // ????? ?????
+        // إضافة للسلة
         function addToCart(productId) {
             const product = products.find(p => p.id === productId);
             const item = cart.find(i => i.id === productId);
@@ -190,7 +190,7 @@
                 if (item.quantity < product.stock) {
                     item.quantity += 1;
                 } else {
-                    alert("?????? ??? ???? ?????? ?????? ??????? ?? ?????? ??????!");
+                    alert("عذراً، لقد وصلت للكمية القصوى المتاحة في المخزن حالياً!");
                     return;
                 }
             } else {
@@ -199,14 +199,14 @@
             updateCart();
         }
 
-        // ????? ???????
+        // تغيير الكميات
         function changeQuantity(id, delta) {
             const item = cart.find(i => i.id === id);
             const product = products.find(p => p.id === id);
             if (!item) return;
 
             if (delta > 0 && item.quantity >= product.stock) {
-                alert("?? ?????? ?????? ??????? ???????!");
+                alert("تم الوصول للكمية المتاحة بالمخزن!");
                 return;
             }
 
@@ -217,18 +217,18 @@
             updateCart();
         }
 
-        // ????? ?????? ???????? ????????
+        // تحديث إجمالي الفاتورة والعناصر
         function updateCart() {
             const count = cart.reduce((sum, item) => sum + item.quantity, 0);
             const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
             document.getElementById('cart-count').innerText = count;
-            document.getElementById('cart-total').innerText = `${total} ?.?`;
+            document.getElementById('cart-total').innerText = `${total} ج.م`;
 
             const cartItemsContainer = document.getElementById('cart-items');
             
             if (cart.length === 0) {
-                cartItemsContainer.innerHTML = `<p class="text-center text-gray-400 py-8 text-sm">????? ????? ?????? - ??? ????? ????????</p>`;
+                cartItemsContainer.innerHTML = `<p class="text-center text-gray-400 py-8 text-sm">السلة فارغة حالياً - اضف بضاعة للفاتورة</p>`;
                 return;
             }
 
@@ -236,7 +236,7 @@
                 <div class="flex justify-between items-center py-3">
                     <div>
                         <p class="font-bold text-gray-800 text-xs">${item.name}</p>
-                        <p class="text-xs text-blue-600 font-semibold">${item.price} ?.? � ${item.quantity} = ${item.price * item.quantity} ?.?</p>
+                        <p class="text-xs text-blue-600 font-semibold">${item.price} ج.م × ${item.quantity} = ${item.price * item.quantity} ج.م</p>
                     </div>
                     <div class="flex items-center gap-2">
                         <button onclick="changeQuantity(${item.id}, -1)" class="w-6 h-6 bg-gray-200 text-gray-700 rounded-md font-bold hover:bg-gray-300">-</button>
@@ -247,43 +247,43 @@
             `).join('');
         }
 
-        // ???/????? ???????
+        // فتح/إغلاق النافذة
         function toggleCart() {
             document.getElementById('cart-modal').classList.toggle('hidden');
         }
 
-        // ????? ???????? ??? ???????? ????? ???????
+        // إرسال الفاتورة عبر الواتساب للرقم المختار
         function sendOrderToWhatsApp() {
             if (cart.length === 0) {
-                alert("????? ????? ????? ???????? ?????!");
+                alert("برجاء إضافة بضاعة للفاتورة أولاً!");
                 return;
             }
 
-            const clientName = document.getElementById('client-name').value.trim() || "???? ???? ???";
+            const clientName = document.getElementById('client-name').value.trim() || "عميل بدون اسم";
             const selectedPhone = document.getElementById('sales-contact').value;
             const selectedName = document.getElementById('sales-contact').options[document.getElementById('sales-contact').selectedIndex].text.split('(')[0];
 
-            let message = `*?? ?????? ??? ????? - ??? ???*\n`;
+            let message = `*🧾 فاتورة طلب بضاعة - عرب سات*\n`;
             message += `----------------------------------\n`;
-            message += `?? *??????:* ??? ??? ?????? ??????? ??????????\n`;
-            message += `?? *???????:* ??? ????? - ????? ????? ??????? - ??? ????\n`;
+            message += `🏢 *المتجر:* عرب سات لخدمات المحمول والكمبيوتر\n`;
+            message += `📍 *العنوان:* شرم الشيخ - بجوار ماركت العباسي - محل أمان\n`;
             message += `----------------------------------\n`;
-            message += `?? *??????/?????:* ${clientName}\n`;
-            message += `?? *???? ???:* ${selectedName}\n`;
-            message += `?? *???????:* ${new Date().toLocaleDateString('ar-EG')}\n`;
+            message += `👤 *العميل/المحل:* ${clientName}\n`;
+            message += `📞 *موجه إلى:* ${selectedName}\n`;
+            message += `📅 *التاريخ:* ${new Date().toLocaleDateString('ar-EG')}\n`;
             message += `----------------------------------\n`;
-            message += `*???????? ????????:*\n\n`;
+            message += `*المنتجات المطلوبة:*\n\n`;
 
             cart.forEach((item, index) => {
                 message += `${index + 1}. *${item.name}*\n`;
-                message += `   ?????? ????????: ${item.quantity} ???? | ????????: ${item.price * item.quantity} ?.?\n\n`;
+                message += `   الكمية المطلوبة: ${item.quantity} قطعة | الإجمالي: ${item.price * item.quantity} ج.م\n\n`;
             });
 
             const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
             message += `----------------------------------\n`;
-            message += `?? *?????? ???????? ???????:* ${total} ?.?\n`;
+            message += `💰 *إجمالي الفاتورة النهائي:* ${total} ج.م\n`;
             message += `----------------------------------\n`;
-            message += `????? ?????? ?????? ????? ???????.`;
+            message += `برجاء مراجعة وتأكيد تجهيز البضاعة.`;
 
             const encodedMessage = encodeURIComponent(message);
             const whatsappUrl = `https://wa.me/${selectedPhone}?text=${encodedMessage}`;
@@ -291,7 +291,7 @@
             window.open(whatsappUrl, '_blank');
         }
 
-        // ????? ????? ?????
+        // تشغيل العرض الأول
         renderProducts();
     </script>
 </body>
